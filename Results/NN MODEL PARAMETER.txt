@@ -1,0 +1,8 @@
+Model parameters
+
+Hidden layers: 200
+Activation: tanh
+Solver: Adam
+Alpha: 0.0001
+Max iterations: 1000
+Replicable training: True

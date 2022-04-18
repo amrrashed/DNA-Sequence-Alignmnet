@@ -1,0 +1,160 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Orange Report</title>
+
+    <style>
+    html, body, table {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin:0px;
+        padding:0;
+        border:0 none;
+    }
+
+    h1, h2 , h3, h4, h5 {
+       padding: 1px;
+       font-size:100%;
+    }
+
+    h1 {
+        color: white;
+        background-color: black;
+        padding: 4px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        border-bottom: 1px solid black;
+        padding-left: 2px;
+    }
+
+    ul, table, p {
+        padding: 10px;
+    }
+
+    table {
+        margin-left: -6px;
+    }
+
+    span.timestamp {
+        position: absolute;
+        right: 40px;
+        color:#ddd;
+    }
+
+    div.selected, div.normal {
+        margin: 5px;
+    }
+
+    div.selected {
+        background: #ddd;
+    }
+    @media print{
+        div.selected {
+            background: inherit;
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    div.content {
+        margin-left: 15px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 2px 6px 2px 6px;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    @media screen {
+        td, th {
+            white-space: nowrap;
+        }
+    }
+
+    .caption {
+        text-align: center;
+        font-size: 90%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        max-height: 20cm;
+    }
+
+    span.legend-square {
+        width: 1em;
+        height: 1em;
+        margin-right: 6px;
+        display: inline-block;
+    }
+
+    span.legend-item {
+        margin-right: 24px;
+    }
+
+    textarea {
+        border: 1px solid silver;
+        font-style: italic;
+        width: 100%;
+        height: 4em;
+    }
+
+    .textwrapper {
+        padding: 15px;
+    }
+
+    div.normal textarea:invalid {
+        display: none;
+    }
+
+    div.selected textarea {
+        display: block;
+    }
+
+    @media print{
+        section.section, img {
+            page-break-inside: avoid;
+        }
+    }
+    </style>
+    <script>
+    function scrollToId(id) {
+        var sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.scrollIntoView();
+            return true;
+        }
+        return false;
+    };
+
+    function setSelectedId(id) {
+        var sel_el = document.getElementsByClassName('selected')[0];
+        if (sel_el != undefined && sel_el.id != id) {
+           sel_el.className = 'normal';
+        }
+        sel_el = document.getElementById(id);
+        if (sel_el != undefined) {
+            sel_el.className = 'selected';
+            return true;
+        }
+        return false;
+    };
+    </script>
+
+</head><body onload="(function (id) {     setSelectedId(id); scrollToId(id); }(&quot;2720947406168&quot;));">
+
+ 
+
+<div id="2720947406168" class="selected" onclick="pybridge._select_item(this.id)"><section class="section"><h1>Rank <span class="timestamp">Sat Jan 16 21, 18:39:59</span></h1><div class="content">
+<h2>Input</h2><ul><b>Features:</b> f2, f4, fr6, fr8, f10, f12, f14, f16, f1, f3, fr5, fr7, f9, f11, f13, f15  (total: 16 features)<br><b>Target:</b> class<br></ul><h2>Ranks</h2><table>
+<tbody><tr><th></th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">#</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Info. gain</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Gain ratio</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">Gini</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">ANOVA</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">χ²</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">ReliefF</th><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;">FCBF</th></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">fr8</pyqt5.qtgui.qicon></th><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.05364217300341512</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.05364217308463012</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.0004601086636860652</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">22.7820535899745</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">2335.280342794611</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.12484034554072605</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.014016227033343636</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f16</pyqt5.qtgui.qicon></th><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.05315889023328069</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.05315889045684544</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.00046043406015938704</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">22.607763597654486</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">2318.750663023112</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.10464377332311099</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.013888195742745265</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f4</pyqt5.qtgui.qicon></th><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.04967446953965027</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.049674469949115216</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.0004241500791056785</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">21.039979889194793</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">2168.6677033139567</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.15963641857724964</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.012966058849179134</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f12</pyqt5.qtgui.qicon></th><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.04961341270394115</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.0496134127122873</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.0004239581191981534</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">20.972597558004896</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">2161.9828743881358</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.14783898874364235</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.012949915360888567</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f10</pyqt5.qtgui.qicon></th><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.04911512883103697</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.04911512923589129</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.0004390748156640756</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">20.752246399061594</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">2140.9490563892327</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.13239329324810228</td><td style="color:black;border:1px solid black;background:transparent;text-align:right;vertical-align:middle;">0.012818187964797856</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f2</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.04885645270450745</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.04885645271272626</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0004406807197353535</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">20.64376169361514</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2130.224939953163</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.1322063838745208</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.012749817275853502</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">fr6</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.04855851888987672</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.04855851909409418</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0004115840443766894</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">20.540703254907662</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2120.47332721883</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.1469459453282116</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.012671081846841022</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f14</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.04832483097696638</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.048324831375306306</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0004122912306397941</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">20.45409119465106</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2112.1733700551877</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.14652991023512293</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.012609333349457708</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f3</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0114499546413942</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.011449954658729592</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.432036760986357e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">4.5740650669123575</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">497.20752718366685</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.14626068607553427</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0029591492273274103</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f11</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.011095957025175629</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.011095957041975064</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.299504823073285e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">4.401545213555826</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">478.72855415542</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.12225805987173799</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0028673990416706392</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">fr5</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.010401856133126053</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.010401856218868197</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.095792290974675e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">4.180519805416617</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">455.0508689409303</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.16601962523362102</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.002687548566942169</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f13</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.010326487177469978</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.010326487262590858</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.069054517579328e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">4.1450326449574995</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">451.2413116084114</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.15257174022369877</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0026680233826940135</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f9</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.009406919666461455</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.009406920022516696</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2.5737791974345114e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.741740739148113</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">407.93439064625744</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.08559173545240158</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0024298602039441856</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f1</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.009296012314901958</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.009296012328976252</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2.593948414786329e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.693837301756235</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">402.7022705804669</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.12900200812237858</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0024011434126820263</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">fr7</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.008248120707627038</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.008248120820016979</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2.2570812313271738e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.2524343568773264</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">355.1349288923768</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.10890132083372757</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0021298983850344517</td></tr><tr><th style="color:black;border:0;background:transparent;text-align:left;vertical-align:middle;"><pyqt5.qtgui.qicon object="" at="" 0x000002798f97e0d8="">f15</pyqt5.qtgui.qicon></th><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;"></td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.008216848961838608</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.008216849029569812</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">2.345936912184765e-05</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">3.2640529812275845</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">356.37888158910005</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.1207101517919104</td><td style="color:black;border:0;background:transparent;text-align:right;vertical-align:middle;">0.0021218059989467374</td></tr></tbody></table><h2>Output</h2><ul><b>Features:</b> fr8, f16, f4, f12, f10<br><b>Target:</b> class<br></ul></div></section>
+
+<div class="textwrapper"><textarea placeholder="Write a comment..." oninput="this.innerHTML = this.value;pybridge._add_comment(this.parentNode.parentNode.id, this.value);"></textarea></div></div></body></html>
