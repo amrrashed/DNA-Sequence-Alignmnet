@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   18:14:54 10/25/2019
+-- Design Name:   
+-- Module Name:   C:/Users/amr rashed/Desktop/vhdl codes/project1/tb1.vhd
+-- Project Name:  project1
+-- Target Device:  
+-- Tool versions:  
+-- Description:   
+-- 
+-- VHDL Test Bench Created by ISE for module: project1
+-- 
+-- Dependencies:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+--
+-- Notes: 
+-- This testbench has been automatically generated using types std_logic and
+-- std_logic_vector for the ports of the unit under test.  Xilinx recommends
+-- that these types always be used for the top-level I/O of a design in order
+-- to guarantee that the testbench will bind correctly to the post-implementation 
+-- simulation model.
+--------------------------------------------------------------------------------
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
+ 
+ENTITY tb1 IS
+END tb1;
+ 
+ARCHITECTURE behavior OF tb1 IS 
+ 
+    -- Component Declaration for the Unit Under Test (UUT)
+ 
+    COMPONENT project1
+    PORT(
+         y : IN  std_logic_vector(15 downto 0);
+         F : OUT  std_logic_vector(53 downto 0)
+        );
+    END COMPONENT;
+    
+
+   --Inputs
+   signal y : std_logic_vector(15 downto 0) := (others => '0');
+
+ 	--Outputs
+   signal F : std_logic_vector(53 downto 0);
+	
+   -- No clocks detected in port list. Replace <clock> below with 
+   -- appropriate port name 
+ 
+   --constant <clock>_period : time := 10 ns;
+ 
+BEGIN
+ 
+	process
+      --variable to track errors
+      variable errCnt : integer := 0;
+   begin
+	--wait for 100 ns;
+      --TEST 1
+      y <= "0000000000000000";
+      F <= "000000000000100100100100000000000000010010010010010010";
+		--decimal 2512555943058
+      wait for 15 ns;
+      assert(F = "000000000000100100100100000000000000010010010010010010")  report "good 1"  severity error;
+      if(F /= "000000000000100100100100000000000000010010010010010010") then
+         errCnt := errCnt + 1;
+      end if;
+		  --TEST 2
+      y <= "0000000000000001";
+      F <= "000000000000100100100010000000000000010010010010010010";
+		--decimal 2510408459410
+      wait for 15 ns;
+      assert(F = "000000000000100100100010000000000000010010010010010010")  report "good 2"  severity error;
+      if(F /= "000000000000100100100010000000000000010010010010010010") then
+         errCnt := errCnt + 1;
+      end if;
+		  --TEST 3
+      y <= "0000000000000010";
+      F <= "000000000000100100100001000000000000010010010010010010";
+		--decimal 2509334717586 
+      wait for 15 ns;
+      assert(F = "000000000000100100100001000000000000010010010010010010")  report "good 3"  severity error;
+      if(F /= "000000000000100100100001000000000000010010010010010010") then
+         errCnt := errCnt + 1;
+      end if;
+	 -------------- SUMMARY -------------
+      if(errCnt = 0) then
+         assert false report "Good!"	severity note;
+      else
+         assert true report "Error!"	severity error;
+     end if;
+	
+   end process;
+		
+
+END;
